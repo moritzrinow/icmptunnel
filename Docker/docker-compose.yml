@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+    server:
+        container_name: icmptunnel-server
+        build:
+            context: ..
+            dockerfile: Docker/Server.Dockerfile
+        image: icmptunnel-server
+        
+    client:
+        container_name: icmptunnel-client
+        build:
+            context: ..
+            dockerfile: Docker/Client.Dockerfile
+        image: icmptunnel-client
